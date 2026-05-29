@@ -18,11 +18,11 @@ pipeline {
             }
         }
 
-        stage('Run Application') {
-            steps {
-                bat 'node app.js'
-            }
-        }
+        // stage('Run Application') {
+        //     steps {
+        //         bat 'node app.js'
+        //     }
+        // }
 
         stage('Run Tests') {
             steps {
