@@ -1,9 +1,9 @@
 
 {
-  "name": "ci-node-app",
+  "name": "ci-node-web-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "node app.js",
-    "test": "node test.js"
+    "start": "index.html",
+    "test": "index.html"
   }
 }
