@@ -3,7 +3,7 @@
   "name": "ci-node-web-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "index.html",
-    "test": "index.html"
+    "start": "node app.js",
+    "test": "echo \"eeror: no test specified\" && exit 1"
   }
 }
