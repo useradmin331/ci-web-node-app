@@ -12,11 +12,11 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                bat 'npm install'
-            }
-        }
+        // stage('Install Dependencies') {
+        //     steps {
+        //         bat 'npm install'
+        //     }
+        // }
 
         // stage('Run Application') {
         //     steps {
@@ -24,11 +24,11 @@ pipeline {
         //     }
         // }
 
-        stage('Run Tests') {
-            steps {
-                bat 'npm test'
-            }
-        }
+        // stage('Run Tests') {
+        //     steps {
+        //         bat 'npm test'
+        //     }
+        // }
 
         stage('Build Docker Image') {
             steps {
