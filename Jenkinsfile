@@ -1,20 +1,25 @@
 pipeline {
     agent any
+
     stages {
-        stage('clone') {
+
+        stage('Clone Repository') {
             steps {
-                url : https://github.com/useradmin331/ci-web-node-app.git
+                git branch: 'main',
+                url: 'https://github.com/useradmin331/ci-web-node-app.git'
             }
         }
-        stage('install') {
+
+        stage('Build Docker Image') {
             steps {
-                npm install
+                bat 'docker build -t web-devops-app .'
             }
         }
-        stage('Deploy') {
+
+        stage('Run Docker Container') {
             steps {
-                npm start
-                
+                bat 'docker rm -f web-container'
+                bat 'docker run -d -p 8080:80 --name web-container web-devops-app'
             }
         }
     }
